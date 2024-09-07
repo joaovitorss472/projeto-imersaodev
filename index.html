@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diário de Humor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Diário de Humor</h1>
+    
+
+    <form id="moodForm">
+        <label for="date">Data:</label>
+        <input type="date" id="date" name="date" required>
+        
+        <label for="mood">Humor:</label>
+        <select id="mood" name="mood" required>
+            <option value="feliz" data-emoji="😊">Feliz 😊</option>
+            <option value="triste" data-emoji="😢">Triste 😢</option>
+            <option value="neutro" data-emoji="😐">Neutro 😐</option>
+        </select>
+        
+        <label for="note">Observações:</label>
+        <textarea id="note" name="note" rows="4" cols="50" required></textarea>
+        
+        <button type="submit">Salvar</button>
+    </form>
+
+    <!-- Campo de busca por data -->
+    <div id="searchContainer">
+        <label for="searchDate">Buscar por data:</label>
+        <input type="date" id="searchDate" name="searchDate">
+        <button id="searchButton" data-emoji="🔍">Buscar</button> 
+    </div>
+
+    <div id="results">
+        <h2>Resultados</h2>
+        <ul id="resultsList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
